@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Raymond Mi's portfolio — software, computer vision, web, and hardware projects." />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Raymond Mi</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav aria-label="Primary navigation">
+        <a href="./" aria-current="page">Home</a>
+        <a href="about/">About Me</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="intro" aria-labelledby="intro-heading">
+        <h1 id="intro-heading">I build practical projects <br />across <span>software &amp; hardware.</span></h1>
+        <div class="intro-footer">
+          <p>
+            I’m Raymond Mi, a University of Waterloo Computer Science student and developer interested in website user interfaces, computer vision, deep learning algorithms, neural networks, and building cool things.
+          </p>
+          <div class="social-links" aria-label="Social links">
+            <a href="https://github.com/rayCoder08" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/raymond-mi/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="work" aria-labelledby="work-heading">
+        <div class="section-heading">
+          <h2 id="work-heading">Project Showcase</h2>
+        </div>
+
+        <article class="featured-project">
+          <div class="feature-copy">
+            <div class="project-meta">
+              <span class="project-number">01</span>
+              <span class="featured-label">Featured hackathon project</span>
+            </div>
+            <h3>Branchseed<br />Navigator</h3>
+            <p class="project-summary">
+              A CPU-only prototype that identifies and traces (for 5-10 mm) the daughter blood vessels branching directly from the abdominal
+              aorta in CT/CTA scans, given a binary mask that tells you where the aorta is.
+            </p>
+            <p class="contribution">
+              Built collaboratively (in a team of 4 first-year Waterloo computer science students) for the 2026 Battle of the Schools Hackathon in 24 hours. Uses deterministic computer-vision
+              techniques with a local review dashboard. Tested in an an evaluation environment some pretty strict time and compute requirements. 8 GB of RAM, no GPU, a 4-core CPU, and no internet access.
+            </p>
+            <p>Won first place (healthcare track) at the Battle of the Schools Hackathon.</p>
+            <a class="project-link" href="https://github.com/nex0517/BOTS_2026" target="_blank" rel="noreferrer">
+              View repository <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <figure class="feature-visual">
+            <div class="cta-image-wrap">
+              <img
+                src="assets/branchseed-cta.png"
+                alt="Axial contrast-enhanced CT slice from the subject001 NIfTI test case"
+                width="960"
+                height="960"
+                loading="lazy"
+              />
+              <span class="image-label" aria-hidden="true">SUBJECT001 · AXIAL CTA</span>
+            </div>
+            <figcaption>
+              Axial CTA slice rendered as an example of the input data, directly from the subject001 NIfTI test case.
+            </figcaption>
+          </figure>
+          <ul class="tech-list" aria-label="Technologies">
+            <li>Python</li>
+            <li>NumPy</li>
+            <li>SciPy</li>
+            <li>SimpleITK</li>
+            <li>Node.js</li>
+          </ul>
+        </article>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <figure class="project-card-image">
+              <img src="assets/IMG_5476.jpeg" alt="Piano Tiles game running on a monitor beside a Raspberry Pi and four physical button controls" width="4032" height="3024" loading="lazy" />
+            </figure>
+            <div class="project-card-body">
+              <div class="project-meta"><span class="project-number">02</span><span>Python · Raspberry Pi</span></div>
+              <h3>Piano Tiles<br />Hardware Game</h3>
+              <p>A Tkinter game inspired by Piano Tiles, connected to physical push buttons through Raspberry Pi GPIO pins. Also uses a piezo buzzer for sounds effects to alert the player about their progress.</p>
+              <a href="https://github.com/rayCoder08/piano-tiles-game" target="_blank" rel="noreferrer" aria-label="View Piano Tiles Hardware Game on GitHub">GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <figure class="project-card-image">
+              <img src="assets/IMG_5054.jpeg" alt="Coin counter setup with a Raspberry Pi, coins, and detected coin labels displayed on a monitor" width="4032" height="3024" loading="lazy" />
+            </figure>
+            <div class="project-card-body">
+              <div class="project-meta"><span class="project-number">03</span><span>Python · OpenCV</span></div>
+              <h3>Computer Vision<br />Coin Counter</h3>
+              <p>Using Python's OpenCV library, this program identifies Canadian coins by radius and colour, totals their value, and outputs an labelled image of every detection. Tested on about 20 different coins I had lying around in my spare change.</p>
+              <a href="https://github.com/rayCoder08/coin-counter-opencv" target="_blank" rel="noreferrer" aria-label="View Computer Vision Coin Counter on GitHub">GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="project-card project-card--compact">
+            <div class="project-card-body">
+              <div class="project-meta"><span class="project-number">04</span><span>HTML · CSS · JavaScript</span></div>
+              <h3>Game Dev Club<br />Website</h3>
+              <p>A club website featuring meeting information, resources, and a carousel showcasing nine student-built games.</p>
+              <a href="https://github.com/rayCoder08/mgci-game-dev-club-website" target="_blank" rel="noreferrer" aria-label="View Game Development Club Website on GitHub">GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-strip" aria-labelledby="about-heading">
+        <p class="eyebrow">A little about me</p>
+        <div>
+          <h2 id="about-heading">Always curious to learn.<br />Practical by design.</h2>
+          <p>I enjoy building which have the potential make a real impact on the world. That includes currency conversion, which millions of people rely on every day, and a coin counter, which could help a school count change received after fundraising.
+          </p>
+          <a class="text-link" href="about/">More about me <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Raymond Mi</p>
+      <a href="#main">Back to top <span aria-hidden="true">↑</span></a>
+    </footer>
+  </body>
+</html>
