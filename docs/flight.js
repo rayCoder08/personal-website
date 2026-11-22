@@ -1,66 +1,95 @@
 (() => {
-  const image = document.querySelector("#flight-frame");
-  const hero = image?.closest(".hero");
-  if (!hero) return;
+  const desktop = window.matchMedia("(min-width: 900px) and (min-height: 650px) and (prefers-reduced-motion: no-preference)");
+  const stage = document.querySelector(".hero-stage");
+  const work = document.querySelector("#work");
+  const hero = stage?.querySelector(".hero");
+  const canvas = stage?.querySelector(".flight-replay");
+  const context = canvas?.getContext("2d");
+  if (!hero || !work || !context) return;
 
-  const desktopMotion = window.matchMedia("(min-width: 900px) and (prefers-reduced-motion: no-preference)");
-  const poster = image.src;
-  const lastFrame = 10;
-  const frames = new Map([[0, image]]);
-  let active = false;
-  let currentFrame = 0;
-  let animationFrame = 0;
-  let startedLoading = false;
+  // Aerochronix's fixed-camera capture: 40 tiles follow the static first frame.
+  const tileLeft = 248;
+  const tileWidth = 344;
+  const tileColumns = 5;
+  const lastFrame = 40;
+  const atlas = new Image();
+  atlas.decoding = "async";
+  let paintedFrame = 0;
+  let pendingPaint = 0;
+  let atlasReady = false;
+
+  const clamp = (value) => Math.max(0, Math.min(1, value));
 
   function paint() {
-    animationFrame = 0;
-    if (!active) return;
+    pendingPaint = 0;
+    const bounds = stage.getBoundingClientRect();
+    const travel = bounds.height - hero.offsetHeight;
+    if (travel <= 0) return;
 
-    const { top, height } = hero.getBoundingClientRect();
-    const progress = Math.max(0, Math.min(1, -top / (height * 0.65)));
-    const target = Math.round(progress * lastFrame);
-    const frame = frames.get(target);
+    const progress = clamp(-bounds.top / travel);
+    const fadeStart = hero.offsetHeight - 56;
+    const fadeEnd = Math.min(160, window.innerHeight * 0.2);
+    const fade = clamp((fadeStart - work.getBoundingClientRect().top) / (fadeStart - fadeEnd));
+    const alpha = 1 - fade * fade * (3 - 2 * fade);
+    hero.style.setProperty("--hero-alpha", alpha);
 
-    if (target !== currentFrame && frame?.complete && frame.naturalWidth) {
-      image.src = target === 0 ? poster : frame.src;
-      currentFrame = target;
+    if (!atlas.src && bounds.bottom > 0 && bounds.top < window.innerHeight) {
+      atlas.src = canvas.dataset.frames;
     }
+    if (!atlasReady) return;
+
+    const target = Math.round(clamp(progress / 0.76) * lastFrame);
+    if (target === paintedFrame) return;
+
+    context.clearRect(tileLeft, 0, tileWidth, canvas.height);
+    if (target > 0) {
+      const tile = target - 1;
+      const x = (tile % tileColumns) * tileWidth;
+      const y = Math.floor(tile / tileColumns) * canvas.height;
+      context.drawImage(atlas, x, y, tileWidth, canvas.height, tileLeft, 0, tileWidth, canvas.height);
+    }
+    paintedFrame = target;
+    canvas.dataset.frame = target;
   }
 
   function queuePaint() {
-    if (active && !animationFrame) animationFrame = window.requestAnimationFrame(paint);
-  }
-
-  function loadFrames() {
-    if (!active || startedLoading) return;
-    startedLoading = true;
-    for (let i = 1; i <= lastFrame; i++) {
-      const frame = new Image();
-      frame.decoding = "async";
-      frame.onload = queuePaint;
-      frame.src = new URL(String(i).padStart(2, "0") + ".webp", poster).href;
-      frames.set(i, frame);
-    }
+    if (!pendingPaint) pendingPaint = window.requestAnimationFrame(paint);
   }
 
   function syncMotion() {
-    active = desktopMotion.matches;
-    if (active) {
+    document.documentElement.classList.toggle("flight-motion", desktop.matches);
+    if (desktop.matches) {
       window.addEventListener("scroll", queuePaint, { passive: true });
       window.addEventListener("resize", queuePaint, { passive: true });
-      if ("requestIdleCallback" in window) window.requestIdleCallback(loadFrames, { timeout: 1200 });
-      else window.setTimeout(loadFrames, 200);
       queuePaint();
     } else {
       window.removeEventListener("scroll", queuePaint);
       window.removeEventListener("resize", queuePaint);
-      if (animationFrame) window.cancelAnimationFrame(animationFrame);
-      animationFrame = 0;
-      if (currentFrame !== 0) image.src = poster;
-      currentFrame = 0;
+      window.cancelAnimationFrame(pendingPaint);
+      pendingPaint = 0;
+      paintedFrame = 0;
+      canvas.dataset.frame = "0";
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      hero.style.removeProperty("--hero-alpha");
     }
   }
 
-  desktopMotion.addEventListener("change", syncMotion);
+  atlas.onload = () => {
+    atlasReady = true;
+    if (desktop.matches) queuePaint();
+  };
+  desktop.addEventListener("change", syncMotion);
   syncMotion();
 })();
+
+if ("IntersectionObserver" in window) {
+  const reveal = new IntersectionObserver((entries, observer) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      observer.unobserve(entry.target);
+      if (!entry.target.matches(":focus-within")) entry.target.classList.add("project-entered");
+    }
+  }, { threshold: 0.1 });
+
+  for (const project of document.querySelectorAll(".project")) reveal.observe(project);
+}

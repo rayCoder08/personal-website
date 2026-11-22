@@ -17,13 +17,11 @@
   --secondary: #b8cae4;
   --rule: #293852;
   --gutter: clamp(24px, 5.2vw, 80px);
-  --shell: 1200px;
+  --shell: 1240px;
   --radius: 5px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -65,7 +63,7 @@ h2 {
 .skip-link {
   position: fixed;
   inset: .75rem auto auto .75rem;
-  z-index: 1;
+  z-index: 5;
   padding: .55rem .9rem;
   background: var(--text);
   color: var(--background);
@@ -81,7 +79,8 @@ h2 {
   justify-content: space-between;
   align-items: center;
   gap: .75rem 2rem;
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg, #293d6d, #47629d 46%, #23324d) 1;
 }
 
 .site-name, .main-nav a {
@@ -119,7 +118,7 @@ h2 {
   padding-block: clamp(4.1rem, 7.2vw, 6.75rem) clamp(4rem, 6.2vw, 5.75rem);
 }
 
-.hero h1, .about-hero h1 {
+.hero h1 {
   font-size: clamp(3.55rem, 6.2vw, 4.75rem);
   line-height: .99;
   letter-spacing: -.065em;
@@ -158,6 +157,7 @@ h2 {
 .flight { min-width: 0; }
 
 .flight-image {
+  position: relative;
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid #3a4c68;
@@ -165,10 +165,15 @@ h2 {
   background: var(--surface);
 }
 
-.flight img {
+.flight img, .flight-replay {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+}
+
+.flight-replay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }
 
 .flight figcaption {
@@ -189,18 +194,57 @@ h2 {
 }
 
 .flight figcaption a:hover { color: var(--link); }
+.flight-cue { display: none; }
 
-.work, .contact { scroll-margin-top: 1.5rem; }
+.work, .about, .contact { scroll-margin-top: 1.5rem; }
 
-.work {
+.work > .shell {
   padding-top: clamp(2rem, 5vw, 3.5rem);
   border-top: 1px solid var(--rule);
+}
+
+@media (min-width: 900px) and (min-height: 650px) and (prefers-reduced-motion: no-preference) {
+  .flight-motion .hero-stage {
+    --flight-travel: clamp(260px, 46svh, 390px);
+  }
+
+  .flight-motion .hero-stage::after {
+    content: "";
+    display: block;
+    height: var(--flight-travel);
+  }
+
+  .flight-motion .hero {
+    position: sticky;
+    top: 0;
+    min-height: min(680px, calc(100svh - 74px));
+    padding-block: clamp(2.5rem, 7svh, 4.5rem);
+    opacity: var(--hero-alpha, 1);
+  }
+
+  .flight-motion .flight-cue { display: inline; }
+
+  .flight-motion .work {
+    position: relative;
+    z-index: 1;
+    margin-top: calc(-1 * clamp(112px, 20svh, 176px));
+    background: var(--background);
+  }
+
+  .flight-motion .work::before {
+    content: "";
+    position: absolute;
+    inset: auto 0 100%;
+    height: 60px;
+    background: linear-gradient(transparent, var(--background));
+    pointer-events: none;
+  }
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(3.5rem, 7vw, 5.5rem) clamp(2.25rem, 5vw, 3.75rem);
+  gap: 3.5rem 2rem;
   margin-top: clamp(1.5rem, 3.4vw, 2.65rem);
 }
 
@@ -212,15 +256,58 @@ h2 {
 }
 
 .project-media {
+  position: relative;
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
+  border: 1px solid #384762;
   border-radius: var(--radius);
   background: var(--surface);
 }
 
-.project-media:hover { outline: 1px solid var(--blue); }
+.project:first-child .project-media { border-color: #5574b5; }
+
+.project-destination {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 1rem;
+  background: rgb(8 14 31 / .77);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 750;
+  line-height: 1.35;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 210ms ease-out;
+}
+
+.project-media:focus-visible .project-destination { opacity: 1; }
+
+@media (hover: hover) and (pointer: fine) {
+  .project-media:hover .project-destination { opacity: 1; }
+}
+
+@media (hover: none), (pointer: coarse), (max-width: 760px) {
+  .project-destination {
+    inset: auto 0 0;
+    justify-items: start;
+    padding: .9rem .75rem .55rem;
+    background: linear-gradient(transparent, rgb(8 14 31 / .96));
+    opacity: 1;
+    font-size: .875rem;
+    text-align: left;
+  }
+
+  .media--coin .project-destination, .media--piano .project-destination {
+    inset: 0 0 auto;
+    padding: .55rem .75rem .9rem;
+    background: linear-gradient(rgb(8 14 31 / .96), transparent);
+  }
+}
 
 .project-media img {
   width: 100%;
@@ -256,11 +343,20 @@ h2 {
   font-size: clamp(1rem, 1.45vw, 1.0625rem);
 }
 
+.project-result {
+  margin-top: .7rem;
+  color: var(--link);
+  font-size: .9375rem;
+}
+
+.project-result span { margin-inline: .2em; }
+.project-result--aviation strong { font-size: 1.0625rem; }
+
 .project-details {
   display: grid;
   gap: .52rem;
   width: 100%;
-  margin-block: .95rem .75rem;
+  margin-top: .9rem;
   font-size: .9375rem;
   line-height: 1.62;
 }
@@ -273,7 +369,7 @@ h2 {
 
 .project-details dt { color: var(--text); font-weight: 750; }
 .project-details dd, .image-caption { color: var(--secondary); }
-.image-caption { margin-bottom: .55rem; font-size: .875rem; }
+.image-caption { margin-top: .55rem; font-size: .875rem; }
 
 .icon {
   width: 1.15em;
@@ -286,7 +382,7 @@ h2 {
   stroke-linejoin: round;
 }
 
-.icon-link, .text-link {
+.icon-link {
   display: inline-flex;
   min-height: 44px;
   align-items: center;
@@ -298,51 +394,38 @@ h2 {
   text-underline-offset: .27em;
 }
 
-.icon-link:hover, .text-link:hover { color: var(--text); }
-.project-link { margin-top: auto; font-size: .9375rem; }
+.icon-link:hover { color: var(--text); }
 
-.about-strip, .about-section {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
-  align-items: start;
-  gap: clamp(1rem, 5vw, 4.5rem);
+.about {
   border-top: 1px solid var(--rule);
+  margin-top: clamp(3.75rem, 7vw, 6rem);
   padding-block: clamp(2.1rem, 5.5vw, 4.25rem);
 }
 
-.about-strip { margin-top: clamp(4.25rem, 9vw, 8rem); }
+.about-copy { max-width: 66ch; }
 
-.about-strip p, .about-section p {
-  max-width: 58ch;
+.about-copy p {
+  margin-top: .9rem;
   color: var(--secondary);
   font-size: clamp(1rem, 1.5vw, 1.125rem);
 }
 
-.about-strip .text-link, .about-section .icon-link { margin-top: .75rem; }
-
-.about-hero {
-  padding-block: clamp(4rem, 8vw, 7rem);
-}
-
-.about-hero p {
-  max-width: 60ch;
-  margin-top: 1.5rem;
-  color: var(--secondary);
-  font-size: clamp(1.125rem, 2vw, 1.375rem);
-}
-
-.about-section p + p { margin-top: 1rem; }
+.about-copy .earlier-work { font-size: .9375rem; }
+.earlier-work a, .legacy-route a { color: var(--link); text-underline-offset: .2em; }
+.legacy-route { padding-block: 2rem; }
 
 .contact {
   border-top: 1px solid var(--rule);
-  padding-block: clamp(2.1rem, 5.5vw, 4.25rem);
+  padding-block: clamp(1.6rem, 3.5vw, 2.7rem);
 }
+
+.contact h2 { font-size: clamp(1.55rem, 2.8vw, 2.25rem); }
 
 .contact-links {
   display: flex;
   flex-wrap: wrap;
   gap: .2rem clamp(1.2rem, 3vw, 2rem);
-  margin-top: .95rem;
+  margin-top: .55rem;
 }
 
 .site-footer {
@@ -352,6 +435,17 @@ h2 {
 }
 
 .site-footer small { font-size: .875rem; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .project-entered {
+    animation: project-enter 460ms cubic-bezier(.22, .65, .24, 1);
+  }
+}
+
+@keyframes project-enter {
+  from { opacity: .48; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 @media (max-width: 1000px) {
   .project-details > div {
@@ -374,12 +468,11 @@ h2 {
     gap: 1.65rem;
   }
 
-  .hero h1, .about-hero h1 { font-size: clamp(2.75rem, 9vw, 3.75rem); }
+  .hero h1 { font-size: clamp(2.75rem, 9vw, 3.75rem); }
   .hero-copy p { margin-block: 1rem 1.2rem; }
   .flight figcaption { margin-top: .55rem; }
-  .project-grid { grid-template-columns: minmax(0, 1fr); gap: 3rem; }
+  .project-grid { grid-template-columns: minmax(0, 1fr); gap: 2.75rem; }
   .project h3 { margin-top: 1rem; }
-  .about-strip, .about-section { grid-template-columns: minmax(0, 1fr); }
 }
 
 @media (max-width: 420px) {
@@ -390,9 +483,9 @@ h2 {
 
   .main-nav { gap: 1rem; }
 
-  .project-details { margin-block: .85rem .6rem; }
+  .project-details { margin-top: .8rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  .project-destination { transition: none; }
 }

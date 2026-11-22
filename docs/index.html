@@ -16,115 +16,125 @@
       <a class="site-name" href="./">Raymond Mi</a>
       <nav class="main-nav" aria-label="Primary">
         <a href="#work">Work</a>
-        <a href="about/">About</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
     <main id="main" tabindex="-1">
-      <section class="hero shell" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <h1 id="hero-title">Curiosity <span>in motion.</span></h1>
-          <p>I’m Raymond Mi, a Computer Science student at the University of Waterloo. I build software to explore how complex systems behave and how people make decisions inside them.</p>
-          <a class="primary-action" href="#work">View projects</a>
-        </div>
-        <figure class="flight">
-          <div class="flight-image">
-            <img id="flight-frame" src="assets/flight/00.webp" width="752" height="423" fetchpriority="high"
-                 alt="Aerochronix reconstruction showing the recorded paths of FedEx 1432 and Southwest 708 over Austin–Bergstrom International Airport">
+      <div class="hero-stage">
+        <section class="hero shell" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <h1 id="hero-title">Curiosity <span>in motion.</span></h1>
+            <p>I’m Raymond Mi, a Computer Science student at the University of Waterloo. I build software to explore how complex systems behave and how people make decisions inside them.</p>
+            <a class="primary-action" href="#work">View projects</a>
           </div>
-          <figcaption>
-            <a href="https://aerochronix.netlify.app/#/incidents/fedex-1432-southwest-708">FedEx 1432 / Southwest 708</a>
-            <span>Aerochronix reconstruction · USGS imagery</span>
-          </figcaption>
-        </figure>
-      </section>
+          <figure class="flight">
+            <div class="flight-image">
+              <img id="flight-frame" src="assets/flight/overview-poster.webp" width="752" height="423" fetchpriority="high"
+                   alt="Aerochronix reconstruction showing the recorded paths of FedEx 1432 and Southwest 708 over Austin–Bergstrom International Airport">
+              <canvas class="flight-replay" width="752" height="423" data-frames="assets/flight/overview-frames.webp" aria-hidden="true"></canvas>
+            </div>
+            <figcaption>
+              <a href="https://aerochronix.netlify.app/#/incidents/fedex-1432-southwest-708">FedEx 1432 / Southwest 708</a>
+              <span>Aerochronix reconstruction · USGS imagery<span class="flight-cue"> · Scroll to replay</span></span>
+            </figcaption>
+          </figure>
+        </section>
+      </div>
 
-      <section class="work shell" id="work" aria-labelledby="work-title">
-        <h2 id="work-title">Selected work</h2>
-        <div class="project-grid">
-          <article class="project" aria-labelledby="aerochronix-title">
-            <a class="project-media" href="https://aerochronix.netlify.app/" aria-label="Open Aerochronix">
-              <img src="assets/aerochronix-graph.webp" alt="Aerochronix knowledge graph focused on low visibility, alongside its documented incident connections and evidence" width="1265" height="712" loading="lazy" decoding="async">
-            </a>
-            <h3 id="aerochronix-title">Aerochronix</h3>
-            <p class="project-summary">An aviation safety platform for exploring documented incidents, comparing contributing factors, and replaying recorded flight paths.</p>
-            <dl class="project-details">
-              <div><dt>Technology</dt><dd>React, TypeScript, D3.js, Three.js</dd></div>
-              <div><dt>Implementation</dt><dd>The graph progressively renders connected incidents and factors. Selecting a node reveals the supporting investigation evidence.</dd></div>
-            </dl>
-            <a class="icon-link project-link" href="https://aerochronix.netlify.app/" aria-label="Open the Aerochronix live demo"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#globe"></use></svg>Live demo</a>
-          </article>
-          <article class="project" aria-labelledby="candybal-title">
-            <a class="project-media" href="https://github.com/rayCoder08/devin-game-jam" aria-label="View the GitHub repository for Candybal">
-              <img src="assets/candybal-gameplay.webp" alt="Two playable cupcakes and a candy cane in Candybal’s colourful bakery arena" width="1280" height="720" loading="lazy" decoding="async">
-            </a>
-            <h3 id="candybal-title">Candybal</h3>
-            <p class="project-summary">A two-player Unreal Engine game that turns iPhones into tilt controllers for a cupcake brawl.</p>
-            <dl class="project-details">
-              <div><dt>Technology</dt><dd>Unreal Engine 5, C++, Node.js, WebSocket, Cloudflare Tunnel</dd></div>
-              <div><dt>Implementation</dt><dd>I designed the periodic sunlight mechanic. It melts both players’ frosting, adding pressure to change tactics before the round ends.</dd></div>
-            </dl>
-            <a class="icon-link project-link" href="https://github.com/rayCoder08/devin-game-jam" aria-label="View the Candybal GitHub repository"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#github"></use></svg>GitHub</a>
-          </article>
-          <article class="project" aria-labelledby="casentra-title">
-            <a class="project-media media--casentra" href="https://casentra.netlify.app/" aria-label="Open Casentra">
-              <img src="assets/casentra-decision.webp" alt="Casentra’s Enron decision screen with company indicators, historical context, and three accounting policy choices" width="1280" height="800" loading="lazy" decoding="async">
-            </a>
-            <h3 id="casentra-title">Casentra</h3>
-            <p class="project-subtitle">Corporate Collapse Simulator</p>
-            <p class="project-summary">A historical simulation that puts players in charge of decisions at companies such as Enron and Silicon Valley Bank, then compares their choices with the record.</p>
-            <dl class="project-details">
-              <div><dt>Technology</dt><dd>React, TypeScript, Vite, Netlify Functions</dd></div>
-              <div><dt>Implementation</dt><dd>A deterministic engine replays choices and updates each scenario. Interview Mode grades calculations and supports optional AI feedback.</dd></div>
-            </dl>
-            <a class="icon-link project-link" href="https://casentra.netlify.app/" aria-label="Open the Casentra live demo"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#globe"></use></svg>Live demo</a>
-          </article>
-          <article class="project" aria-labelledby="branchseed-title">
-            <a class="project-media media--scan" href="https://github.com/nex0517/BOTS_2026" aria-label="View the GitHub repository for Branchseed Navigator">
-              <img src="assets/branchseed-cta.png" alt="Axial contrast-enhanced CT slice from the subject001 NIfTI test case" loading="lazy" decoding="async">
-            </a>
-            <h3 id="branchseed-title">Branchseed Navigator</h3>
-            <p class="project-subtitle">Aorta Segmentation</p>
-            <p class="project-summary">A CPU-only prototype that starts with an aorta mask and traces the first 5–10 mm of the blood vessels branching from it in CT and CTA scans.</p>
-            <dl class="project-details">
-              <div><dt>Technology</dt><dd>Python, NumPy, SciPy, SimpleITK, Node.js</dd></div>
-              <div><dt>Implementation</dt><dd>Our four-person team built the prototype in 24 hours under a four-core CPU and 8 GB RAM limit. It placed first in the Battle of the Schools healthcare track.</dd></div>
-            </dl>
-            <p class="image-caption">Input CTA slice from the subject001 NIfTI test case.</p>
-            <a class="icon-link project-link" href="https://github.com/nex0517/BOTS_2026" aria-label="View the Branchseed Navigator GitHub repository"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#github"></use></svg>GitHub</a>
-          </article>
-          <article class="project" aria-labelledby="coin-counter-title">
-            <a class="project-media media--coin" href="https://github.com/rayCoder08/coin-counter-opencv" aria-label="View the GitHub repository for Computer Vision Coin Counter">
-              <img src="assets/coin-counter.webp" alt="Coin counter setup with a Raspberry Pi, coins, and detected coin labels displayed on a monitor" width="1280" height="960" loading="lazy" decoding="async">
-            </a>
-            <h3 id="coin-counter-title">Computer Vision Coin Counter</h3>
-            <p class="project-summary">A Raspberry Pi application that identifies Canadian coins, labels the detections, and totals their value.</p>
-            <dl class="project-details">
-              <div><dt>Technology</dt><dd>Python, OpenCV, NumPy, Raspberry Pi 3</dd></div>
-              <div><dt>Implementation</dt><dd>I combined Hough circle detection with radius and colour calibration, then aggregated detections across frames to reduce false readings.</dd></div>
-            </dl>
-            <a class="icon-link project-link" href="https://github.com/rayCoder08/coin-counter-opencv" aria-label="View the Computer Vision Coin Counter GitHub repository"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#github"></use></svg>GitHub</a>
-          </article>
-          <article class="project" aria-labelledby="piano-tiles-title">
-            <a class="project-media media--piano" href="https://github.com/rayCoder08/piano-tiles-game" aria-label="View the GitHub repository for Piano Tiles Hardware Game">
-              <img src="assets/piano-tiles.webp" alt="Piano Tiles game running on a monitor beside a Raspberry Pi and four physical button controls" width="1280" height="960" loading="lazy" decoding="async">
-            </a>
-            <h3 id="piano-tiles-title">Piano Tiles Hardware Game</h3>
-            <p class="project-summary">A timing game played with four physical push buttons connected to a Raspberry Pi.</p>
-            <dl class="project-details">
-              <div><dt>Technology</dt><dd>Python, Tkinter, gpiozero, Raspberry Pi</dd></div>
-              <div><dt>Implementation</dt><dd>I wired the physical controls. Four debounced GPIO inputs drive the game loop, and a piezo buzzer signals hits and misses.</dd></div>
-            </dl>
-            <a class="icon-link project-link" href="https://github.com/rayCoder08/piano-tiles-game" aria-label="View the Piano Tiles Hardware Game GitHub repository"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#github"></use></svg>GitHub</a>
-          </article>
+      <section class="work" id="work" tabindex="-1" aria-labelledby="work-title">
+        <div class="shell">
+          <h2 id="work-title">Selected work</h2>
+          <div class="project-grid">
+            <article class="project" aria-labelledby="aerochronix-title">
+              <a class="project-media" href="https://aerochronix.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="View Aerochronix website (opens in a new tab)">
+                <img src="assets/aerochronix-graph.webp" alt="Aerochronix knowledge graph focused on low visibility, alongside its documented incident connections and evidence" width="1265" height="712" loading="lazy" decoding="async">
+                <span class="project-destination" aria-hidden="true"><span>View Aerochronix website</span></span>
+              </a>
+              <h3 id="aerochronix-title">Aerochronix</h3>
+              <p class="project-summary">Search and filter aviation investigations, replay flight paths, and discover related incidents through their shared contributing factors.</p>
+              <p class="project-result project-result--aviation"><strong>250</strong> incidents <span aria-hidden="true">·</span> <strong>40</strong> animated 2.5D reconstructions</p>
+              <dl class="project-details">
+                <div><dt>Tech Stack</dt><dd>React, TypeScript, D3.js, Three.js</dd></div>
+                <div><dt>Implementation</dt><dd>An interactive D3 knowledge graph lays out incident and factor nodes progressively. Selecting a connection reveals the evidence behind it; the Three.js replay draws on recorded flight data.</dd></div>
+              </dl>
+            </article>
+            <article class="project" aria-labelledby="candybal-title">
+              <a class="project-media" href="https://github.com/rayCoder08/devin-game-jam" target="_blank" rel="noopener noreferrer" aria-label="View Candybal on GitHub (opens in a new tab)">
+                <img src="assets/candybal-gameplay.webp" alt="Two playable cupcakes and a candy cane in Candybal’s colourful bakery arena" width="1280" height="720" loading="lazy" decoding="async">
+                <span class="project-destination" aria-hidden="true"><span>View Candybal on GitHub</span></span>
+              </a>
+              <h3 id="candybal-title">Candybal</h3>
+              <p class="project-summary">A two-player cupcake brawl that uses iPhone tilt as the controller. A WebSocket relay sends motion input to Unreal Engine through a Cloudflare Tunnel.</p>
+              <p class="project-result"><strong>Best Use of Meshy</strong> <span aria-hidden="true">·</span> Four-person team, three-hour game jam</p>
+              <dl class="project-details">
+                <div><dt>Tech Stack</dt><dd>Unreal Engine 5, C++, Node.js, WebSocket, Cloudflare Tunnel</dd></div>
+                <div><dt>Implementation</dt><dd>I designed the periodic sunlight mechanic. Melting both players’ frosting adds a deadline that changes when players attack or retreat.</dd></div>
+              </dl>
+            </article>
+            <article class="project" aria-labelledby="casentra-title">
+              <a class="project-media media--casentra" href="https://casentra.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="View Casentra website (opens in a new tab)">
+                <img src="assets/casentra-decision.webp" alt="Casentra’s Enron decision screen with company indicators, historical context, and three accounting policy choices" width="1280" height="800" loading="lazy" decoding="async">
+                <span class="project-destination" aria-hidden="true"><span>View Casentra website</span></span>
+              </a>
+              <h3 id="casentra-title">Casentra</h3>
+              <p class="project-subtitle">Corporate Collapse Simulator</p>
+              <p class="project-summary">Make decisions during historical corporate crises, from Enron and WorldCom to Silicon Valley Bank and FTX, and compare the outcome with the historical record.</p>
+              <p class="project-result"><strong>18 playable historical simulations</strong> <span aria-hidden="true">·</span> Enron Interview Mode</p>
+              <dl class="project-details">
+                <div><dt>Tech Stack</dt><dd>React, TypeScript, Vite, Netlify Functions</dd></div>
+                <div><dt>Implementation</dt><dd>A deterministic engine replays decisions against scenario rules. Enron Interview Mode applies structured scoring to calculations and offers feedback on the reasoning.</dd></div>
+              </dl>
+            </article>
+            <article class="project" aria-labelledby="branchseed-title">
+              <a class="project-media media--scan" href="https://github.com/nex0517/BOTS_2026" target="_blank" rel="noopener noreferrer" aria-label="View Branchseed Navigator on GitHub (opens in a new tab)">
+                <img src="assets/branchseed-cta.png" alt="Axial contrast-enhanced CT slice from the subject001 NIfTI test case" loading="lazy" decoding="async">
+                <span class="project-destination" aria-hidden="true"><span>View Branchseed Navigator on GitHub</span></span>
+              </a>
+              <h3 id="branchseed-title">Branchseed Navigator</h3>
+              <p class="project-subtitle">Aorta Segmentation</p>
+              <p class="project-summary">Our four-person team built a CPU-only pipeline in 24 hours to find the daughter vessels branching from a supplied abdominal aorta mask in CTA scans.</p>
+              <p class="project-result"><strong>First place, healthcare track</strong> <span aria-hidden="true">·</span> Battle of the Schools</p>
+              <dl class="project-details">
+                <div><dt>Tech Stack</dt><dd>Python, NumPy, SciPy, SimpleITK, Node.js</dd></div>
+                <div><dt>Implementation</dt><dd>The pipeline restricts its search to a narrow physical shell around the aorta, then traces the first 5–10 mm of each candidate branch. It preserves the scan’s physical coordinates and runs under a four-core CPU and 8 GB RAM limit.</dd></div>
+              </dl>
+              <p class="image-caption">Input CTA slice from the subject001 NIfTI test case.</p>
+            </article>
+            <article class="project" aria-labelledby="coin-counter-title">
+              <a class="project-media media--coin" href="https://github.com/rayCoder08/coin-counter-opencv" target="_blank" rel="noopener noreferrer" aria-label="View Coin Counter on GitHub (opens in a new tab)">
+                <img src="assets/coin-counter.webp" alt="Coin counter setup with a Raspberry Pi, coins, and detected coin labels displayed on a monitor" width="1280" height="960" loading="lazy" decoding="async">
+                <span class="project-destination" aria-hidden="true"><span>View Coin Counter on GitHub</span></span>
+              </a>
+              <h3 id="coin-counter-title">Computer Vision Coin Counter</h3>
+              <p class="project-summary">A Raspberry Pi counter that identifies five Canadian coin denominations, annotates the detections, and calculates their total value.</p>
+              <dl class="project-details">
+                <div><dt>Tech Stack</dt><dd>Python, OpenCV, NumPy, Raspberry Pi 3</dd></div>
+                <div><dt>Implementation</dt><dd>I used Gaussian blur and Hough circles to localize coins, then grouped detections across 19 frames. Calibrated radii and inner-versus-outer colour distinguish the similarly sized loonie and toonie.</dd></div>
+              </dl>
+            </article>
+            <article class="project" aria-labelledby="piano-tiles-title">
+              <a class="project-media media--piano" href="https://github.com/rayCoder08/piano-tiles-game" target="_blank" rel="noopener noreferrer" aria-label="View Piano Tiles on GitHub (opens in a new tab)">
+                <img src="assets/piano-tiles.webp" alt="Piano Tiles game running on a monitor beside a Raspberry Pi and four physical button controls" width="1280" height="960" loading="lazy" decoding="async">
+                <span class="project-destination" aria-hidden="true"><span>View Piano Tiles on GitHub</span></span>
+              </a>
+              <h3 id="piano-tiles-title">Piano Tiles Hardware Game</h3>
+              <p class="project-summary">I built a timing game with a partner. A Tkinter interface responds to four physical buttons wired through a breadboard to a Raspberry Pi.</p>
+              <dl class="project-details">
+                <div><dt>Tech Stack</dt><dd>Python, Tkinter, gpiozero, Raspberry Pi</dd></div>
+                <div><dt>Implementation</dt><dd>I wired the controls and piezo buzzer. Debounced GPIO inputs drive the game loop, and the buzzer plays distinct feedback for hits and misses.</dd></div>
+              </dl>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="about-strip shell" aria-labelledby="about-title">
-        <h2 id="about-title">About me</h2>
-        <div>
-          <p>I’m drawn to the moments when software makes a complex system easier to understand. That’s taken me from aviation safety and decision simulations to computer vision and physical controls.</p>
-          <a class="text-link" href="about/">More about me</a>
+      <section class="about shell" id="about" aria-labelledby="about-title">
+        <div class="about-copy">
+          <h2 id="about-title">About me</h2>
+          <p>I’m a first-year Computer Science student at the University of Waterloo. I’m interested in software engineering that makes complex systems easier to understand, especially in aviation and autonomous vehicles.</p>
+          <p>I like building things that respond to the real world. Working with computer vision, Raspberry Pis, and motion sensors means testing real inputs and figuring out what breaks outside a demo.</p>
+          <p class="earlier-work">I also built the <a href="https://github.com/rayCoder08/mgci-game-dev-club-website">website for my high school’s game development club</a>, including a showcase of nine student-built games.</p>
         </div>
       </section>
 
