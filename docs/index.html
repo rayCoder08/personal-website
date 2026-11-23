@@ -25,17 +25,18 @@
         <div class="hero-copy">
           <h1 id="hero-title">Curiosity <span>in motion.</span></h1>
           <p>I’m Raymond Mi, a Computer Science student at the University of Waterloo. I build software to explore complex systems and solve practical engineering problems.</p>
-          <p class="availability"><strong>Available for Summer 2027 Co-op opportunities</strong></p>
-          <a class="view-projects" href="#work">View Projects</a>
+          <p class="availability"><strong>Available for Summer 2027 co-op opportunities.</strong></p>
+          <p class="hero-explore">Click nodes or buttons in the sample graph. Drag to pan.</p>
+          <p><a class="hero-work-link" href="#work"><strong>Or, view my best projects below</strong></a></p>
         </div>
 
         <div class="hero-graph" aria-labelledby="graph-title">
           <div class="graph-header">
-            <h2 id="graph-title">Aerochronix knowledge graph</h2>
+            <h2 id="graph-title">Sample Aerochronix Knowledge Graph</h2>
             <div class="graph-controls" role="group" aria-label="Graph view controls">
               <button type="button" data-graph-action="out" aria-label="Zoom out" disabled>−</button>
               <button type="button" data-graph-action="in" aria-label="Zoom in" disabled>+</button>
-              <button type="button" data-graph-action="reset" disabled>Reset view</button>
+              <button type="button" data-graph-action="reset" disabled>Reset View</button>
             </div>
           </div>
           <div class="graph-canvas">
@@ -60,7 +61,7 @@
           </div>
           <div class="graph-footer">
             <p><span class="graph-key graph-key--incident" aria-hidden="true"></span> Incident <span class="graph-key graph-key--factor" aria-hidden="true"></span> Contributing factor</p>
-            <a href="https://aerochronix.netlify.app/" target="_blank" rel="noopener noreferrer">Explore the full Aerochronix platform</a>
+            <a href="https://aerochronix.netlify.app/" target="_blank" rel="noopener noreferrer">Explore the full knowledge graph with 250 incidents</a>
           </div>
         </div>
       </section>
@@ -84,7 +85,7 @@
                 <span class="project-destination" aria-hidden="true"><span>View GitHub</span></span>
               </a>
               <h3 id="branchseed-title">Branchseed Navigator</h3>
-              <p class="project-subtitle">Aorta Segmentation</p>
+              <p class="project-subtitle">Hackathon Winner</p>
               <p class="project-summary">Our four-person team won first place in the Battle of the Schools healthcare track after building a CPU-only CTA prototype in 24 hours. I drafted candidate detection strategies for the team. The finished pipeline searches a narrow shell around the abdominal aorta, identifies daughter vessels, and traces their first 5–10 mm in the scan’s physical coordinate system.</p>
               <p class="project-stack"><strong>Tech Stack:</strong> Python, NumPy, SciPy, SimpleITK, Node.js</p>
               <p class="image-caption">Input CTA slice from the subject001 NIfTI test case.</p>
@@ -95,7 +96,7 @@
                 <span class="project-destination" aria-hidden="true"><span>View GitHub</span></span>
               </a>
               <h3 id="candybal-title">Candybal</h3>
-              <p class="project-summary">Our four-person team built a two-player cupcake brawl in a three-hour jam and won Best Use of Meshy. A WebSocket relay through a Cloudflare Tunnel turns iPhone tilt into Unreal Engine controls. I designed a 30-second sunlight cycle that melts the cupcakes’ frosting, changing when players attack or retreat.</p>
+              <p class="project-summary">Our four-person team built a two-player cupcake brawl in a three-hour jam and won Best Use of Meshy. A WebSocket relay through a Cloudflare Tunnel turns iPhone tilt into Unreal Engine controls. I designed the sunlight mechanic, which melts the cupcakes’ frosting and changes when players attack or retreat.</p>
               <p class="project-stack"><strong>Tech Stack:</strong> Unreal Engine 5, C++, Node.js, WebSockets, Cloudflare Tunnel</p>
             </article>
             <article class="project" aria-labelledby="casentra-title">
@@ -122,9 +123,9 @@
                 <img src="assets/piano-tiles.webp" alt="Piano Tiles game running on a monitor beside a Raspberry Pi and four physical button controls" width="1280" height="960" loading="lazy" decoding="async">
                 <span class="project-destination" aria-hidden="true"><span>View GitHub</span></span>
               </a>
-              <h3 id="piano-tiles-title">Piano Tiles Hardware Game</h3>
-              <p class="project-summary">I built this timing game with a partner. I wired four physical push buttons through a breadboard to the Raspberry Pi and connected a piezo buzzer. Debounced GPIO inputs drive the Tkinter game loop, and different tones signal hits and misses.</p>
-              <p class="project-stack"><strong>Tech Stack:</strong> Python, Tkinter, gpiozero, Raspberry Pi</p>
+              <h3 id="piano-tiles-title">Piano Tiles-Inspired Hardware Game</h3>
+              <p class="project-summary">My partner and I built this timing game inspired by Piano Tiles. I wired four physical push buttons through a breadboard to the Raspberry Pi and connected a piezo buzzer. Debounced GPIO inputs drive the Tkinter game loop, and different tones signal hits and misses.</p>
+              <p class="project-stack"><strong>Tech Stack:</strong> Python, Tkinter, Raspberry Pi</p>
             </article>
           </div>
         </div>
@@ -133,7 +134,7 @@
       <section class="about shell" id="about" aria-labelledby="about-title">
         <h2 id="about-title">About me</h2>
         <p>I’m drawn to aviation and autonomous vehicles because the details matter. Building with cameras, flight data, and physical controls has taught me to test the assumptions that look fine on paper and fail with real inputs.</p>
-        <p>I also built a website for the University of Waterloo’s Game Development Club that stayed at the prototype stage.</p>
+        <p>On the University of Waterloo’s Automotive Future Team (UWAFT), I’m integrating a rear electric motor into a hybrid vehicle model in MATLAB/Simulink, configuring torque commands, axle connections, and feedback. I compare baseline and modified simulations to validate the powertrain, tracking motor torque, vehicle speed, and battery state of charge.</p>
       </section>
 
     </main>

@@ -3,8 +3,6 @@
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const projects = document.querySelectorAll(".project");
-  const workTitle = document.querySelector("#work-title");
-  const projectsLink = document.querySelector(".view-projects");
   const seen = new WeakSet();
 
   const reveal = new IntersectionObserver((entries, observer) => {
@@ -30,13 +28,4 @@
   window.addEventListener("pageshow", () => {
     requestAnimationFrame(() => requestAnimationFrame(observeUpcomingProjects));
   });
-
-  const workReveal = new IntersectionObserver((entries) => {
-    if (!entries.some(({ isIntersecting }) => isIntersecting)) return;
-    workReveal.disconnect();
-    if (!reducedMotion.matches) {
-      workTitle.animate([{ opacity: 0.66 }, { opacity: 1 }], { duration: 240, easing: "ease-out" });
-    }
-  });
-  projectsLink?.addEventListener("click", () => workReveal.observe(workTitle));
 })();
