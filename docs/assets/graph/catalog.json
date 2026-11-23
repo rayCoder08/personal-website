@@ -1,0 +1,552 @@
+{
+  "nodes": [
+    {
+      "id": "incident:marine-one-envoy-3742",
+      "kind": "incident",
+      "title": "Marine One / Envoy 3742",
+      "label": "Marine One / Envoy",
+      "description": "Marine One lifted off from the Ellipse as Envoy 3742 departed nearby from Reagan National.",
+      "date": "2026-08-04",
+      "thumbnail": "assets/graph/marine-one-envoy-3742.webp",
+      "creator": "JTOcchialini",
+      "license": "CC BY-SA 2.0",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:VH-3D_Sea_King_%22Marine_One%22_MIA_04222015_JTPI_4x6_3798_(17239396832).jpg"
+    },
+    {
+      "id": "incident:american-5342-black-hawk",
+      "kind": "incident",
+      "title": "American 5342 / Black Hawk",
+      "label": "American 5342",
+      "description": "A regional jet circling to land at Reagan National and a Black Hawk flying south along the Potomac lost separation.",
+      "date": "2025-01-29",
+      "thumbnail": "assets/graph/american-5342-black-hawk.webp",
+      "creator": "U.S. Army",
+      "license": "CC BY-SA 2.0",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Black_Hawk_Helicopter_Flying_Into_the_Sunset_-_United_States_Army.jpg"
+    },
+    {
+      "id": "incident:swiss-17k",
+      "kind": "incident",
+      "title": "SWISS 17K",
+      "label": "SWISS 17K",
+      "description": "An Airbus A330 was cleared for takeoff at JFK just before a second controller cleared four aircraft to cross its runway.",
+      "date": "2024-04-17",
+      "thumbnail": "assets/graph/swiss-17k.webp",
+      "creator": "Markus Eigenheer from Genève, Schweiz",
+      "license": "CC BY-SA 2.0",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:HB-JHD_Airbus_A330-343_A333_-_SWR_(35323358206).jpg"
+    },
+    {
+      "id": "incident:fedex-1432-southwest-708",
+      "kind": "incident",
+      "title": "FedEx 1432 / Southwest 708",
+      "label": "FedEx / Southwest",
+      "description": "In dense fog at Austin, FedEx 1432 continued its approach as Southwest 708 was cleared to take off on the same runway.",
+      "date": "2023-02-04",
+      "thumbnail": "assets/graph/fedex-1432-southwest-708.webp",
+      "creator": "Acroterion",
+      "license": "CC BY-SA 4.0",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Southwest_Boeing_737-700_N7827A_BWI_MD1.jpg"
+    },
+    {
+      "id": "incident:american-106-delta-1943",
+      "kind": "incident",
+      "title": "American 106 / Delta 1943",
+      "label": "American / Delta",
+      "description": "American 106 missed a taxiway turn and crossed an active JFK runway as Delta 1943 began its takeoff roll.",
+      "date": "2023-01-13",
+      "thumbnail": "assets/graph/american-106-delta-1943.webp",
+      "creator": "Alan Wilson",
+      "license": "CC BY-SA 2.0",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Boeing_777-223ER_%27N754AN%27_American_Airlines_(14058681368).jpg"
+    },
+    {
+      "id": "incident:air-canada-726-1259",
+      "kind": "incident",
+      "title": "Air Canada 726 / Air Canada 1259",
+      "label": "Air Canada 726",
+      "description": "Air Canada 726 taxied onto an active runway at Toronto Pearson while Air Canada 1259 was on final approach.",
+      "date": "2016-01-30",
+      "thumbnail": "assets/graph/air-canada-726-1259.webp",
+      "creator": "Charles from Port Chester, New York",
+      "license": "CC BY 2.0",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Air_Canada_E-190(IGW)_C-FNAW_(5718934293).jpg"
+    },
+    {
+      "id": "incident:comair-5191",
+      "kind": "incident",
+      "title": "Comair 5191",
+      "label": "Comair 5191",
+      "description": "Cleared for runway 22 at Lexington, Comair 5191 turned onto the much shorter runway 26 and began its takeoff.",
+      "date": "2006-08-27",
+      "thumbnail": "assets/graph/comair-5191.webp",
+      "creator": "NTSB",
+      "license": "Public domain",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Comair_Flight_5191%EF%BC%88N431CA%EF%BC%89_wreckage.jpg"
+    },
+    {
+      "id": "incident:linate-2001",
+      "kind": "incident",
+      "title": "SAS 686 / D-IEVX",
+      "label": "SAS 686",
+      "description": "A business jet took the wrong taxiway in fog and entered the active runway as SAS 686 began its takeoff.",
+      "date": "2001-10-08",
+      "thumbnail": "assets/graph/linate-2001.webp",
+      "creator": "Ken Fielding (Flickr)",
+      "license": "CC BY-SA 3.0",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:SE-DMA_MD-87_SAS_MAN_28FEB99_(6777145062).jpg"
+    },
+    {
+      "id": "incident:united-1448-fedex-1662",
+      "kind": "incident",
+      "title": "United 1448 / FedEx 1662",
+      "label": "United / FedEx",
+      "description": "After landing in fog at Providence, United 1448 lost its bearings and turned back toward the runway where FedEx 1662 was cleared for departure.",
+      "date": "1999-12-06",
+      "thumbnail": "assets/graph/united-1448-fedex-1662.webp",
+      "creator": "Colin Brown",
+      "license": "CC BY 2.0",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:N596UA_-_Boeing_757-222_-_United_Airlines_(31447063711).jpg"
+    },
+    {
+      "id": "incident:usair-1493-skywest-5569",
+      "kind": "incident",
+      "title": "USAir 1493 / SkyWest 5569",
+      "label": "USAir / SkyWest",
+      "description": "The Los Angeles tower cleared USAir 1493 to land on a runway where SkyWest 5569 was holding for takeoff.",
+      "date": "1991-02-01",
+      "thumbnail": "assets/graph/usair-1493-skywest-5569.webp",
+      "creator": "Anders Nilsson",
+      "license": "CC BY-SA 4.0",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:USAir_Boeing_737-3B7_N388US_January_1990_MIA.jpg"
+    },
+    {
+      "id": "incident:northwest-1482-299",
+      "kind": "incident",
+      "title": "Northwest 1482 / Northwest 299",
+      "label": "Northwest 1482",
+      "description": "Northwest 1482 lost its bearings while taxiing in fog and entered the runway as Northwest 299 began its takeoff.",
+      "date": "1990-12-03",
+      "thumbnail": "assets/graph/northwest-1482-299.webp",
+      "creator": "Hawaiian897",
+      "license": "CC BY-SA 3.0",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Northwest_Airlines_Douglas_DC-9-30_at_Northwest_Florida_Regional_Airport.jpg"
+    },
+    {
+      "id": "incident:tenerife-1977",
+      "kind": "incident",
+      "title": "KLM 4805 / Pan Am 1736",
+      "label": "KLM / Pan Am",
+      "description": "KLM 4805 and Pan Am 1736 were taxiing on the same runway after diverted traffic crowded Tenerife’s Los Rodeos Airport.",
+      "date": "1977-03-27",
+      "thumbnail": "assets/graph/tenerife-1977.webp",
+      "creator": "Unknown photographer (Anefo / Nationaal Archief)",
+      "license": "CC0",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Het_verongelukte_KLM-toestel_De_Rijn,_Bestanddeelnr_929-1005_-_cropped.jpg"
+    },
+    {
+      "id": "factor:F-ENV-LOW-VIS",
+      "kind": "factor",
+      "title": "Low visibility",
+      "label": "Low visibility",
+      "description": "Fog, cloud, rain or darkness limited what crews or controllers could see.",
+      "category": "environment"
+    },
+    {
+      "id": "factor:F-HUM-SA-LOSS",
+      "kind": "factor",
+      "title": "Lost situational awareness",
+      "label": "Situational awareness",
+      "description": "A crew or controller lost track of aircraft position or traffic.",
+      "category": "human"
+    },
+    {
+      "id": "factor:F-ATC-RWY-INCURSION",
+      "kind": "factor",
+      "title": "Runway incursion",
+      "label": "Runway incursion",
+      "description": "An aircraft was on a runway it should not have been on.",
+      "category": "atc"
+    },
+    {
+      "id": "factor:F-ATC-CONFLICTING-CLEARANCE",
+      "kind": "factor",
+      "title": "Conflicting clearances",
+      "label": "Conflicting clearances",
+      "description": "Controllers cleared aircraft into conflicting runway or flight paths.",
+      "category": "atc"
+    },
+    {
+      "id": "factor:F-ATC-COMMS",
+      "kind": "factor",
+      "title": "Radio contact problem",
+      "label": "Radio contact problem",
+      "description": "Radio contact was missed, blocked, incomplete or not established.",
+      "category": "atc"
+    },
+    {
+      "id": "factor:F-ATC-NO-SURFACE-SURVEILLANCE",
+      "kind": "factor",
+      "title": "No surface radar",
+      "label": "No surface radar",
+      "description": "The tower lacked surface surveillance to see aircraft on the ground.",
+      "category": "atc"
+    },
+    {
+      "id": "factor:F-ATC-VISUAL-SEPARATION",
+      "kind": "factor",
+      "title": "Reliance on visual separation",
+      "label": "Visual separation",
+      "description": "Separation depended on pilots seeing each other.",
+      "category": "atc"
+    }
+  ],
+  "edges": [
+    {
+      "id": "marine-one-envoy-3742|F-ATC-COMMS",
+      "source": "incident:marine-one-envoy-3742",
+      "target": "factor:F-ATC-COMMS",
+      "evidence": "Marine One’s calls to DCA tower were not received or were unreadable because radio coverage lacked line of sight to The Ellipse."
+    },
+    {
+      "id": "marine-one-envoy-3742|F-ATC-VISUAL-SEPARATION",
+      "source": "incident:marine-one-envoy-3742",
+      "target": "factor:F-ATC-VISUAL-SEPARATION",
+      "evidence": "After a traffic advisory Marine One immediately reported the airliner in sight."
+    },
+    {
+      "id": "american-5342-black-hawk|F-ATC-VISUAL-SEPARATION",
+      "source": "incident:american-5342-black-hawk",
+      "target": "factor:F-ATC-VISUAL-SEPARATION",
+      "evidence": "The system relied too much on pilot-applied visual separation, and the helicopter crew did not apply it effectively."
+    },
+    {
+      "id": "american-5342-black-hawk|F-HUM-SA-LOSS",
+      "source": "incident:american-5342-black-hawk",
+      "target": "factor:F-HUM-SA-LOSS",
+      "evidence": "The tower team lost situation awareness, leading to inadequate traffic advisories and no safety alerts."
+    },
+    {
+      "id": "american-5342-black-hawk|F-ATC-COMMS",
+      "source": "incident:american-5342-black-hawk",
+      "target": "factor:F-ATC-COMMS",
+      "evidence": "A 0.8-second transmission blocked the “pass behind” part of the controller’s instruction."
+    },
+    {
+      "id": "swiss-17k|F-ATC-RWY-INCURSION",
+      "source": "incident:swiss-17k",
+      "target": "factor:F-ATC-RWY-INCURSION",
+      "evidence": "Four aircraft crossed runway 4L while SWISS 17K was taking off."
+    },
+    {
+      "id": "swiss-17k|F-ATC-CONFLICTING-CLEARANCE",
+      "source": "incident:swiss-17k",
+      "target": "factor:F-ATC-CONFLICTING-CLEARANCE",
+      "evidence": "A takeoff clearance and a crossing clearance for runway 4L were given one second apart."
+    },
+    {
+      "id": "fedex-1432-southwest-708|F-ENV-LOW-VIS",
+      "source": "incident:fedex-1432-southwest-708",
+      "target": "factor:F-ENV-LOW-VIS",
+      "evidence": "Dense fog stopped the controller seeing the 737."
+    },
+    {
+      "id": "fedex-1432-southwest-708|F-ATC-NO-SURFACE-SURVEILLANCE",
+      "source": "incident:fedex-1432-southwest-708",
+      "target": "factor:F-ATC-NO-SURFACE-SURVEILLANCE",
+      "evidence": "The FAA did not require surface detection equipment at Austin."
+    },
+    {
+      "id": "fedex-1432-southwest-708|F-HUM-SA-LOSS",
+      "source": "incident:fedex-1432-southwest-708",
+      "target": "factor:F-HUM-SA-LOSS",
+      "evidence": "The controller lacked awareness of the 737’s position when it asked for takeoff."
+    },
+    {
+      "id": "fedex-1432-southwest-708|F-ATC-RWY-INCURSION",
+      "source": "incident:fedex-1432-southwest-708",
+      "target": "factor:F-ATC-RWY-INCURSION",
+      "evidence": "The NTSB classed the event as a runway incursion."
+    },
+    {
+      "id": "american-106-delta-1943|F-ATC-RWY-INCURSION",
+      "source": "incident:american-106-delta-1943",
+      "target": "factor:F-ATC-RWY-INCURSION",
+      "evidence": "American 106 crossed runway 4L without clearance as Delta 1943 took off."
+    },
+    {
+      "id": "american-106-delta-1943|F-HUM-SA-LOSS",
+      "source": "incident:american-106-delta-1943",
+      "target": "factor:F-HUM-SA-LOSS",
+      "evidence": "The distraction led to a loss of situational awareness."
+    },
+    {
+      "id": "air-canada-726-1259|F-ATC-RWY-INCURSION",
+      "source": "incident:air-canada-726-1259",
+      "target": "factor:F-ATC-RWY-INCURSION",
+      "evidence": "ACA726 taxied across the hold line onto Runway 24R without authorization while ACA1259 was on final."
+    },
+    {
+      "id": "air-canada-726-1259|F-ATC-COMMS",
+      "source": "incident:air-canada-726-1259",
+      "target": "factor:F-ATC-COMMS",
+      "evidence": "Plain-language taxi instruction was misinterpreted and the same-phraseology readback did not confirm common understanding."
+    },
+    {
+      "id": "comair-5191|F-ATC-RWY-INCURSION",
+      "source": "incident:comair-5191",
+      "target": "factor:F-ATC-RWY-INCURSION",
+      "evidence": "Taxiing onto and taking off from runway 26 without clearance made the accident a runway incursion."
+    },
+    {
+      "id": "comair-5191|F-HUM-SA-LOSS",
+      "source": "incident:comair-5191",
+      "target": "factor:F-HUM-SA-LOSS",
+      "evidence": "The conversation during taxi resulted in a loss of positional awareness on the airport surface."
+    },
+    {
+      "id": "linate-2001|F-ATC-RWY-INCURSION",
+      "source": "incident:linate-2001",
+      "target": "factor:F-ATC-RWY-INCURSION",
+      "evidence": "ANSV names the Cessna’s entry onto the active runway as the immediate cause."
+    },
+    {
+      "id": "linate-2001|F-ENV-LOW-VIS",
+      "source": "incident:linate-2001",
+      "target": "factor:F-ENV-LOW-VIS",
+      "evidence": "Fog limited visibility to 50 to 100 metres, listed among the causes."
+    },
+    {
+      "id": "linate-2001|F-ATC-NO-SURFACE-SURVEILLANCE",
+      "source": "incident:linate-2001",
+      "target": "factor:F-ATC-NO-SURFACE-SURVEILLANCE",
+      "evidence": "The ground movement radar was out of service and controllers had no technical aids to confirm positions."
+    },
+    {
+      "id": "united-1448-fedex-1662|F-ATC-NO-SURFACE-SURVEILLANCE",
+      "source": "incident:united-1448-fedex-1662",
+      "target": "factor:F-ATC-NO-SURFACE-SURVEILLANCE",
+      "evidence": "The Providence tower had no surface detection equipment."
+    },
+    {
+      "id": "united-1448-fedex-1662|F-ENV-LOW-VIS",
+      "source": "incident:united-1448-fedex-1662",
+      "target": "factor:F-ENV-LOW-VIS",
+      "evidence": "Visibility was 1/4 mile at night."
+    },
+    {
+      "id": "united-1448-fedex-1662|F-ATC-RWY-INCURSION",
+      "source": "incident:united-1448-fedex-1662",
+      "target": "factor:F-ATC-RWY-INCURSION",
+      "evidence": "United 1448 was near an active runway while FedEx 1662 departed."
+    },
+    {
+      "id": "usair-1493-skywest-5569|F-ATC-CONFLICTING-CLEARANCE",
+      "source": "incident:usair-1493-skywest-5569",
+      "target": "factor:F-ATC-CONFLICTING-CLEARANCE",
+      "evidence": "The controller cleared the 737 to land on the runway where she had placed the Metroliner."
+    },
+    {
+      "id": "usair-1493-skywest-5569|F-ATC-RWY-INCURSION",
+      "source": "incident:usair-1493-skywest-5569",
+      "target": "factor:F-ATC-RWY-INCURSION",
+      "evidence": "SkyWest 5569 was in position on runway 24L when USAir 1493 landed on it."
+    },
+    {
+      "id": "northwest-1482-299|F-ATC-RWY-INCURSION",
+      "source": "incident:northwest-1482-299",
+      "target": "factor:F-ATC-RWY-INCURSION",
+      "evidence": "The lost DC-9 taxied onto runway 3C during the 727’s takeoff roll."
+    },
+    {
+      "id": "northwest-1482-299|F-ENV-LOW-VIS",
+      "source": "incident:northwest-1482-299",
+      "target": "factor:F-ENV-LOW-VIS",
+      "evidence": "Dense fog, with visibility estimated as low as about 100 ft near the collision."
+    },
+    {
+      "id": "tenerife-1977|F-ATC-RWY-INCURSION",
+      "source": "incident:tenerife-1977",
+      "target": "factor:F-ATC-RWY-INCURSION",
+      "evidence": "Pan Am was still taxiing on the runway, and KLM did not stop when Pan Am reported this (corrected translation)."
+    },
+    {
+      "id": "tenerife-1977|F-ATC-COMMS",
+      "source": "incident:tenerife-1977",
+      "target": "factor:F-ATC-COMMS",
+      "evidence": "The tower’s “stand by for take-off” and Pan Am’s “still taxiing” call were transmitted at the same time, causing a whistle of about three seconds."
+    },
+    {
+      "id": "tenerife-1977|F-ENV-LOW-VIS",
+      "source": "incident:tenerife-1977",
+      "target": "factor:F-ENV-LOW-VIS",
+      "evidence": "Low cloud blowing across the airport made visibility change suddenly between near zero and about 1 km."
+    }
+  ],
+  "layouts": {
+    "wide": {
+      "width": 975,
+      "height": 540,
+      "positions": {
+        "incident:marine-one-envoy-3742": [
+          722,
+          94
+        ],
+        "incident:american-5342-black-hawk": [
+          794,
+          173
+        ],
+        "incident:swiss-17k": [
+          188,
+          243
+        ],
+        "incident:fedex-1432-southwest-708": [
+          665,
+          191
+        ],
+        "incident:american-106-delta-1943": [
+          517,
+          443
+        ],
+        "incident:air-canada-726-1259": [
+          366,
+          105
+        ],
+        "incident:comair-5191": [
+          644,
+          284
+        ],
+        "incident:linate-2001": [
+          541,
+          225
+        ],
+        "incident:united-1448-fedex-1662": [
+          395,
+          409
+        ],
+        "incident:usair-1493-skywest-5569": [
+          265,
+          394
+        ],
+        "incident:northwest-1482-299": [
+          286,
+          180
+        ],
+        "incident:tenerife-1977": [
+          418,
+          192
+        ],
+        "factor:F-ENV-LOW-VIS": [
+          506,
+          333
+        ],
+        "factor:F-HUM-SA-LOSS": [
+          820,
+          300
+        ],
+        "factor:F-ATC-RWY-INCURSION": [
+          334,
+          290
+        ],
+        "factor:F-ATC-CONFLICTING-CLEARANCE": [
+          92,
+          354
+        ],
+        "factor:F-ATC-COMMS": [
+          544,
+          98
+        ],
+        "factor:F-ATC-NO-SURFACE-SURVEILLANCE": [
+          665,
+          398
+        ],
+        "factor:F-ATC-VISUAL-SEPARATION": [
+          883,
+          75
+        ]
+      }
+    },
+    "narrow": {
+      "width": 711,
+      "height": 700,
+      "positions": {
+        "incident:marine-one-envoy-3742": [
+          510,
+          153
+        ],
+        "incident:american-5342-black-hawk": [
+          527,
+          241
+        ],
+        "incident:swiss-17k": [
+          210,
+          507
+        ],
+        "incident:fedex-1432-southwest-708": [
+          531,
+          441
+        ],
+        "incident:american-106-delta-1943": [
+          434,
+          400
+        ],
+        "incident:air-canada-726-1259": [
+          257,
+          306
+        ],
+        "incident:comair-5191": [
+          467,
+          315
+        ],
+        "incident:linate-2001": [
+          311,
+          541
+        ],
+        "incident:united-1448-fedex-1662": [
+          637,
+          459
+        ],
+        "incident:usair-1493-skywest-5569": [
+          192,
+          377
+        ],
+        "incident:northwest-1482-299": [
+          389,
+          603
+        ],
+        "incident:tenerife-1977": [
+          361,
+          334
+        ],
+        "factor:F-ENV-LOW-VIS": [
+          430,
+          504
+        ],
+        "factor:F-HUM-SA-LOSS": [
+          612,
+          340
+        ],
+        "factor:F-ATC-RWY-INCURSION": [
+          306,
+          433
+        ],
+        "factor:F-ATC-CONFLICTING-CLEARANCE": [
+          74,
+          454
+        ],
+        "factor:F-ATC-COMMS": [
+          383,
+          215
+        ],
+        "factor:F-ATC-NO-SURFACE-SURVEILLANCE": [
+          570,
+          552
+        ],
+        "factor:F-ATC-VISUAL-SEPARATION": [
+          414,
+          75
+        ]
+      }
+    }
+  }
+}
