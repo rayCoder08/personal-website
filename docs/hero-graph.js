@@ -76,6 +76,7 @@ function mountGraph(container, { nodes, edges, layouts }) {
   const picker = container.querySelector(".graph-picker select");
   const title = container.querySelector(".graph-detail-title");
   const description = container.querySelector(".graph-detail-description");
+  const defaultDescription = description.textContent;
   const detailLinks = container.querySelector(".graph-detail-links");
   const caseLink = container.querySelector(".graph-case-link");
   const photoLink = container.querySelector(".graph-photo-link");
@@ -137,7 +138,7 @@ function mountGraph(container, { nodes, edges, layouts }) {
     const count = edgesByNode.get(id)?.length ?? 0;
     description.textContent = node?.kind === "factor"
       ? node.description + " Links " + count + (count === 1 ? " case" : " cases") + " in this view."
-      : node?.description ?? "Select an incident or contributing factor to see its documented connections.";
+      : node?.description ?? defaultDescription;
 
     const isIncident = node?.kind === "incident";
     detailLinks.hidden = !isIncident;
